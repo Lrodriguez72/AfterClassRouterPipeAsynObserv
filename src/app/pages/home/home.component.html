@@ -1,0 +1,9 @@
+<form [formGroup]="alarmForm" (ngSubmit)="onSubmit()">
+  <input [formControl]="hoursControl"  type="number" placeholder="Hora">
+  <input [formControl]="minutesControl" type="number" placeholder="Minutos">
+  <button type="submit">Establecer alarma</button>
+</form>
+
+<p>{{ horaActual$ | async }}</p>
+
+<p>{{ horaActualNoAsync }}</p>
